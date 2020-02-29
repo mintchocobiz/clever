@@ -14,10 +14,10 @@ server:
       timeout: 30m
 
 xss:
-  type: all
+  type: hardcore    #all, regex, hardcore
   exclude-paths:
-    - /api/demo/skip1
-    - /api/demo/skip2
+    - /api/xss/skip1
+    - /api/xss/skip2
 
 ---
 spring:

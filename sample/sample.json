@@ -1,0 +1,33 @@
+{
+  "animals": [
+    "Alligator",
+    "AntEater",
+    "Baboon",
+    "BaldEagle",
+    "BlackSpiderMonkey",
+    "BoaConstrictor",
+    "BottlenoseDolphin",
+    "Camel",
+    "CostasHummingbird",
+    "CubanGroundIguana",
+    "DesertIguana",
+    "Elephant",
+    "Emu",
+    "Gazelle",
+    "HowlerMonkey",
+    "IndianRockPython",
+    "Koala",
+    "Lion",
+    "MarbledSalamander",
+    "Octopus",
+    "Orangutan",
+    "Ostrich",
+    "Piranha",
+    "Platypus",
+    "PolarBear",
+    "ScreechOwl",
+    "Stingray",
+    "Tarantula",
+    "Zebra"
+  ]
+}

@@ -2,14 +2,10 @@ package biz.mintchoco.clever.biz.xss.entity;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class XssRequestParam {
 
-    private String company;
-
-    private String country;
-
-    private String address;
-
-    private String phoneNumber;
+    private List<String> animals;
 }

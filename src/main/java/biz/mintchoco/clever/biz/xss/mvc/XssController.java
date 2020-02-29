@@ -21,7 +21,7 @@ import java.util.UUID;
 
 @Slf4j
 @RestController
-@RequestMapping("api/demo")
+@RequestMapping("api/xss")
 public class XssController {
 
     private String BASE_REPOSITORY = "/tmp/dev/upload/filter";
@@ -34,7 +34,6 @@ public class XssController {
             f.mkdirs();
         }
     }
-
 
     @PostMapping("json")
     public ResponseEntity<String> json(@RequestBody XssRequestParam param) {
@@ -63,7 +62,7 @@ public class XssController {
         return new ResponseEntity<>(aa, HttpStatus.OK);
     }
 
-    @PostMapping("skip")
+    @PostMapping("skip1")
     public ResponseEntity<String> skip(@RequestBody XssRequestParam param) {
         return new ResponseEntity<>(param.toString(), HttpStatus.OK);
     }

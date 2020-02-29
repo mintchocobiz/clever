@@ -1,5 +1,6 @@
 package biz.mintchoco.clever.config;
 
+import biz.mintchoco.clever.util.XssPair;
 import biz.mintchoco.clever.util.wrapper.XssType;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -39,5 +40,18 @@ public class XssConfig {
             }
         }
         return false;
+    }
+
+    public List<XssPair> getXssPairs() {
+        switch(type) {
+            case ALL:
+                return XssPair.all();
+            case HARDCORE:
+                return XssPair.hardcore();
+            case REGEX:
+                return XssPair.regex();
+            default:
+                return null;
+        }
     }
 }
