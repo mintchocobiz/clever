@@ -1,9 +1,10 @@
-HELP.md
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+LOG_PATH_IS_UNDEFINED
+docker/volume
 
 ### STS ###
 .apt_generated
