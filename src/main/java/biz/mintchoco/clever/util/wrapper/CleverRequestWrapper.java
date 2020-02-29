@@ -1,4 +1,4 @@
-package biz.mintchoco.clever.wrapper;
+package biz.mintchoco.clever.util.wrapper;
 
 import biz.mintchoco.clever.config.XssConfig;
 import biz.mintchoco.clever.util.BeanUtils;

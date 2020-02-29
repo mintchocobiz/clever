@@ -1,6 +1,6 @@
 package biz.mintchoco.clever.filter;
 
-import biz.mintchoco.clever.wrapper.CleverRequestWrapper;
+import biz.mintchoco.clever.util.wrapper.CleverRequestWrapper;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;
