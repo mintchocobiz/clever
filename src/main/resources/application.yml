@@ -1,0 +1,36 @@
+
+spring:
+  profiles:
+    active: local
+  http:
+    encoding:
+      charset: UTF-8
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    session:
+      timeout: 30m
+
+xss:
+  exclude-paths:
+    - /api/demo/skip1
+    - /api/demo/skip2
+
+---
+spring:
+  profiles: local
+
+---
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: stage
+
+---
+spring:
+  profiles: prd
+
