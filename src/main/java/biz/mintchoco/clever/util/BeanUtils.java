@@ -8,11 +8,11 @@ import org.springframework.context.ApplicationContext;
 @Slf4j
 public class BeanUtils {
 
-  public static ApplicationContext getApplicationContext() {
-    return ApplicationContextProvider.getApplicationContext();
-  }
+    public static ApplicationContext getApplicationContext() {
+        return ApplicationContextProvider.getApplicationContext();
+    }
 
-  public static XssConfig getXssConfig() {
-    return getApplicationContext().getBean("xssConfig", XssConfig.class);
-  }
+    public static XssConfig getXssConfig() {
+        return getApplicationContext().getBean("xssConfig", XssConfig.class);
+    }
 }

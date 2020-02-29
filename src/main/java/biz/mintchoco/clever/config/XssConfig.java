@@ -2,6 +2,7 @@ package biz.mintchoco.clever.config;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -15,23 +16,23 @@ import java.util.List;
 @ConfigurationProperties(prefix = "xss")
 public class XssConfig {
 
-  private List<String> excludePaths;
+    private List<String> excludePaths;
 
-  @PostConstruct
-  public void info() {
-    log.debug("xss config -> exclude-path");
-    for (String path : excludePaths) {
-      log.debug(path);
+    @PostConstruct
+    public void info() {
+        log.debug("xss config -> exclude-path");
+        excludePaths.forEach(item -> log.debug(item));
     }
-  }
 
-  public boolean isExcludePath(HttpServletRequest request) {
-    String requestPath = request.getRequestURI();
-    for (String path : excludePaths) {
-      if (requestPath.startsWith(path)) {
-        return true;
-      }
+    public boolean isExcludePath(HttpServletRequest request) {
+        String requestPath = request.getRequestURI();
+        if (StringUtils.isNotBlank(requestPath)) {
+            for (String path : excludePaths) {
+                if (requestPath.startsWith(path)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
-    return false;
-  }
 }
